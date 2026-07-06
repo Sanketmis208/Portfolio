@@ -94,9 +94,9 @@ export const projects: Project[] = [
       'Offline support with local data persistence',
     ],
     hasBeforeAfter: false,
-    year: '2024',
+    year: '2026',
     color: '#8B5CF6',
-    category: 'Mobile Development',
+    category: '',
   },
   {
     slug: 'lnmiit-portal',

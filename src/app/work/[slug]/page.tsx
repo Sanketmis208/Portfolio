@@ -41,9 +41,11 @@ export default async function CaseStudyPage({ params }: Props) {
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <SectionReveal>
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-full border border-[var(--color-border)] text-[var(--color-text-muted)]">
-                {project.category}
-              </span>
+              {project.category && (
+                <span className="text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-full border border-[var(--color-border)] text-[var(--color-text-muted)]">
+                  {project.category}
+                </span>
+              )}
               <span className="text-[10px] text-[var(--color-text-muted)]">{project.year}</span>
             </div>
             <h1

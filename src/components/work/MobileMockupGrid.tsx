@@ -7,7 +7,7 @@ interface Props {
   images: string[];
 }
 
-const PhoneFrame = ({ src, delay = 0 }: { src: string; delay?: number }) => (
+const PhoneFrame = ({ src, delay = 0, priority = false }: { src: string; delay?: number; priority?: boolean }) => (
   <motion.div
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +21,14 @@ const PhoneFrame = ({ src, delay = 0 }: { src: string; delay?: number }) => (
       <div className="absolute top-0 inset-x-0 h-6 flex justify-center z-20">
         <div className="w-1/3 h-5 bg-[#1a1a1a] rounded-b-xl"></div>
       </div>
-      <Image src={src} alt="App mockup" fill className="object-cover object-top" />
+      <Image 
+        src={src} 
+        alt="App mockup" 
+        fill 
+        priority={priority}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        className="object-cover object-top" 
+      />
     </div>
   </motion.div>
 );
@@ -37,19 +44,19 @@ export default function MobileMockupGrid({ images }: Props) {
           {/* Column 1 */}
           <div className="flex flex-col gap-8 lg:gap-12 lg:translate-y-16">
             {images.filter((_, i) => i % 3 === 0).map((img, i) => (
-              <PhoneFrame key={img} src={img} delay={i * 0.1} />
+              <PhoneFrame key={img} src={img} delay={i * 0.1} priority={i === 0} />
             ))}
           </div>
           {/* Column 2 */}
           <div className="flex flex-col gap-8 lg:gap-12">
             {images.filter((_, i) => i % 3 === 1).map((img, i) => (
-              <PhoneFrame key={img} src={img} delay={0.2 + i * 0.1} />
+              <PhoneFrame key={img} src={img} delay={0.2 + i * 0.1} priority={i === 0} />
             ))}
           </div>
           {/* Column 3 */}
           <div className="flex flex-col gap-8 lg:gap-12 lg:translate-y-32 hidden lg:flex">
             {images.filter((_, i) => i % 3 === 2).map((img, i) => (
-              <PhoneFrame key={img} src={img} delay={0.4 + i * 0.1} />
+              <PhoneFrame key={img} src={img} delay={0.4 + i * 0.1} priority={i === 0} />
             ))}
           </div>
         </div>
