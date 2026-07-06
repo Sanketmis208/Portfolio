@@ -18,6 +18,7 @@ export interface Project {
   image?: string;
   link?: string;
   githubLink?: string;
+  appLink?: string;
   mobileImages?: string[];
 }
 
@@ -62,6 +63,7 @@ export const projects: Project[] = [
     title: 'Subcidys',
     tagline: 'GST-ready business management for Indian MSMEs',
     image: '/subcidys.jpg',
+    appLink: 'https://play.google.com/store/apps/details?id=com.subcidys.subcidys_mobile&hl=en_IN',
     mobileImages: [
       '/subcidys/1.png',
       '/subcidys/2.png',
@@ -94,7 +96,7 @@ export const projects: Project[] = [
       'Offline support with local data persistence',
     ],
     hasBeforeAfter: false,
-    year: '2026',
+    year: 'May 2026 - Present',
     color: '#8B5CF6',
     category: '',
   },
@@ -131,35 +133,37 @@ export const projects: Project[] = [
     category: 'Web Development',
   },
   {
-    slug: 'vibesync',
-    title: 'VibeSync',
-    tagline: 'Cross-platform music streaming app',
+    slug: 'dhatuscan',
+    title: 'DhatuScan App',
+    tagline: 'Advanced mobile scanning solution',
     description:
-      'A Flutter-based music streaming application shipped across iOS and macOS, featuring background audio playback, playlist management, and seamless streaming.',
+      'A Flutter-based mobile application designed for efficient scanning and data processing, featuring a clean and intuitive user interface.',
     role: 'Mobile Developer',
-    techStack: ['Flutter', 'Dart', 'audio_service', 'just_audio', 'youtube_explode_dart', 'Hive'],
-    resultLine: 'Shipped a native-quality music experience across iOS and macOS from a single codebase',
+    techStack: ['Flutter', 'Dart', 'Camera', 'Image Processing', 'Local Storage'],
+    resultLine: 'Shipped a highly performant scanning application across mobile platforms.',
     problemStatement:
-      'Existing music streaming options either required subscriptions for basic features or had poor cross-platform support.',
+      'Existing scanning tools were often slow, inaccurate, or lacked a modern user experience.',
     approach:
-      "I leveraged Flutter's cross-platform capabilities with platform-specific audio plugins to create a native-feeling music experience.",
+      "I leveraged Flutter's cross-platform capabilities along with native camera integrations to create a seamless scanning experience.",
     solution:
-      'VibeSync delivers background audio playback with lock screen controls, playlist creation and management, search with instant streaming, and a clean UI — all from one codebase.',
+      'DhatuScan delivers fast and accurate scanning, local data persistence, and a highly responsive UI — all from one codebase.',
     backendCapabilities: [
-      'youtube_explode_dart for audio stream extraction',
-      'Hive local database for playlist persistence',
-      'Background audio service with media controls',
-      'Efficient stream caching and buffering',
+      'Image processing pipeline',
+      'Local database for scan history',
+      'Data export and sharing features',
+      'Efficient resource management',
     ],
     frontendCapabilities: [
-      'Cross-platform Flutter UI (iOS + macOS)',
-      'Now-playing interface with artwork and controls',
-      'Playlist management with drag-to-reorder',
-      'Search interface with streaming preview',
+      'Cross-platform Flutter UI',
+      'Custom camera viewfinder interface',
+      'Scan result visualization',
+      'Real-time feedback and alerts',
     ],
     hasBeforeAfter: false,
-    year: '2024',
-    color: '#EC4899',
-    category: 'Mobile Development',
+    year: '2025',
+    color: '#27C93F',
+    category: 'MOBILE DEVELOPMENT',
+    githubLink: 'https://github.com/Sanketmis208/DhatuScan_App',
+    mobileImages: ['/Dhatuscan/1.png', '/Dhatuscan/2.png', '/Dhatuscan/3.png'],
   },
 ];

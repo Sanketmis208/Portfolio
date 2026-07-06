@@ -8,9 +8,9 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  { href: 'https://linkedin.com/in/sanketmistry', label: 'LinkedIn' },
-  { href: 'https://github.com/sanketmistry', label: 'GitHub' },
-  { href: 'mailto:sanket@example.com', label: 'Email' },
+  { href: 'https://www.linkedin.com/in/sanket-mistry-666164287/', label: 'LinkedIn' },
+  { href: 'https://github.com/Sanketmis208', label: 'GitHub' },
+  { href: 'mailto:sanketmistry.codes@gmail.com', label: 'Email' },
 ];
 
 export default function Footer() {

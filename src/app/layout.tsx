@@ -14,8 +14,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Sanket "Devil" Mistry — Full Stack Developer & Flutter Engineer',
-    template: '%s | Devil',
+    default: 'Sanket Mistry — Full Stack Developer & Flutter Engineer',
+    template: '%s | Sanket Mistry',
   },
   description:
     'Full Stack Developer (MERN) and Flutter Engineer. Building fast, polished products — from luxury export platforms to GST-ready MSME tools.',
