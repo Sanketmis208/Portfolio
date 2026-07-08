@@ -5,7 +5,6 @@ import MagneticButton from '@/components/shared/MagneticButton';
 import SectionReveal from '@/components/shared/SectionReveal';
 import SkillsGrid from '@/components/about/SkillsGrid';
 import Timeline from '@/components/about/Timeline';
-import TestimonialMarquee from '@/components/about/TestimonialMarquee';
 
 export default function AboutSection() {
   const techStack = [
@@ -23,7 +22,7 @@ export default function AboutSection() {
               
               {/* Left Side: Profile Image */}
               <div className="lg:col-span-4 order-2 lg:order-1 flex justify-center lg:justify-start">
-                <div className="relative w-full max-w-[320px] aspect-[3/4] rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-[0_0_40px_rgba(192,255,115,0.1)] group">
+                <div className="relative w-full max-w-[320px] aspect-[3/4] rounded-2xl overflow-hidden border border-[var(--color-border)] hover:border-[var(--color-accent)]/50 transition-colors duration-500 shadow-[0_0_40px_rgba(192,255,115,0.1)] group">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
                   <Image
                     src="/profile.png"
@@ -101,7 +100,7 @@ export default function AboutSection() {
 
 
       {/* Experience */}
-      <section className="py-16 md:py-24">
+      <section className="pt-16 pb-8 md:pt-24 md:pb-16">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <SectionReveal>
             <h2
@@ -113,21 +112,6 @@ export default function AboutSection() {
           </SectionReveal>
           <Timeline />
         </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 md:py-24 bg-[var(--color-bg-secondary)] border-y border-[var(--color-border)] overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 mb-16">
-          <SectionReveal>
-            <h2
-              className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)]"
-              style={{ fontFamily: 'var(--font-display)' }}
-            >
-              What they say
-            </h2>
-          </SectionReveal>
-        </div>
-        <TestimonialMarquee />
       </section>
     </div>
   );

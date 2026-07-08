@@ -1,13 +1,12 @@
 'use client';
 
-import SectionReveal from '@/components/shared/SectionReveal';
 import ContactForm from '@/components/contact/ContactForm';
 
 export default function ContactSection() {
   return (
-    <div id="contact" className="py-24 md:py-32 bg-[var(--color-bg-primary)]">
+    <div id="contact" className="py-16 md:py-24 bg-[var(--color-bg-secondary)] border-t border-[var(--color-border)]">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <SectionReveal>
+        <div className="mb-16">
           <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-accent)] mb-4">
             Contact
           </p>
@@ -17,14 +16,14 @@ export default function ContactSection() {
           >
             Let&apos;s Talk
           </h2>
-          <p className="mt-6 text-lg text-[var(--color-text-secondary)] max-w-xl mb-16">
+          <p className="mt-6 text-lg text-[var(--color-text-secondary)] max-w-xl">
             Have a project in mind, or just want to say hi? I&apos;d love to hear from you.
           </p>
-        </SectionReveal>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Form */}
-          <SectionReveal>
+          <div>
             <div>
               <h2
                 className="text-2xl md:text-3xl font-bold text-[var(--color-text-primary)] mb-8"
@@ -34,10 +33,10 @@ export default function ContactSection() {
               </h2>
               <ContactForm />
             </div>
-          </SectionReveal>
+          </div>
 
           {/* Info */}
-          <SectionReveal delay={0.15}>
+          <div>
             <div className="space-y-8">
               <div>
                 <h3 className="text-xs uppercase tracking-widest text-[var(--color-accent)] mb-4">
@@ -77,7 +76,7 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-          </SectionReveal>
+          </div>
         </div>
       </div>
     </div>
