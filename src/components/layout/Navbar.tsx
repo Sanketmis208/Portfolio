@@ -52,20 +52,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative text-sm font-medium transition-colors duration-300 ${
-                  pathname === link.href
-                    ? 'text-[var(--color-text-primary)]'
-                    : 'text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]'
-                }`}
+                className="group relative text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors duration-300"
               >
                 {link.label}
-                {pathname === link.href && (
-                  <motion.div
-                    className="absolute -bottom-1 left-0 right-0 h-px bg-[var(--color-accent)]"
-                    layoutId="nav-indicator"
-                    transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                  />
-                )}
+                <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[var(--color-accent)] transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
             <MagneticButton variant="outline" size="sm" href="/resume.pdf">

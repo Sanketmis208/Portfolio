@@ -11,9 +11,12 @@ export default function CustomCursor() {
   const [isVisible, setIsVisible] = useState(false);
   const [isTouch, setIsTouch] = useState(true);
 
-  const springConfig = { damping: 25, stiffness: 400, mass: 0.5 };
-  const x = useSpring(cursorX, springConfig);
-  const y = useSpring(cursorY, springConfig);
+  const springConfigDot = { damping: 25, stiffness: 600, mass: 0.3 };
+  const springConfigRing = { damping: 25, stiffness: 200, mass: 0.8 };
+  const xDot = useSpring(cursorX, springConfigDot);
+  const yDot = useSpring(cursorY, springConfigDot);
+  const xRing = useSpring(cursorX, springConfigRing);
+  const yRing = useSpring(cursorY, springConfigRing);
 
   useEffect(() => {
     const touch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -66,7 +69,7 @@ export default function CustomCursor() {
     <>
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference"
-        style={{ x, y, translateX: '-50%', translateY: '-50%' }}
+        style={{ x: xDot, y: yDot, translateX: '-50%', translateY: '-50%' }}
       >
         <motion.div
           className="rounded-full bg-white flex items-center justify-center"
@@ -101,14 +104,14 @@ export default function CustomCursor() {
       </motion.div>
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9998]"
-        style={{ x, y, translateX: '-50%', translateY: '-50%' }}
+        style={{ x: xRing, y: yRing, translateX: '-50%', translateY: '-50%' }}
       >
         <motion.div
-          className="rounded-full border border-white/20"
+          className="rounded-full border border-[var(--color-accent)] shadow-[0_0_15px_rgba(192,255,115,0.3)]"
           animate={{
-            width: isActive ? 0 : 32,
-            height: isActive ? 0 : 32,
-            opacity: isVisible && !isActive ? 0.4 : 0,
+            width: isActive ? 0 : 40,
+            height: isActive ? 0 : 40,
+            opacity: isVisible && !isActive ? 0.7 : 0,
           }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
         />

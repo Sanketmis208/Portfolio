@@ -43,7 +43,7 @@ export default function HeroSection() {
       ref={sectionRef}
       className="relative h-[300vh]"
     >
-      <div className="sticky top-0 h-screen w-full flex items-center overflow-hidden pt-20">
+      <div className="sticky top-0 h-screen w-full flex items-center pt-20">
         {/* Background marquee text */}
         <div className="hero-marquee absolute inset-0 flex items-center overflow-hidden pointer-events-none select-none opacity-0">
           <div className="animate-marquee whitespace-nowrap flex" style={{ ['--marquee-duration' as string]: '15s' }}>
@@ -115,7 +115,7 @@ export default function HeroSection() {
 
       {/* Full-Screen Interactive 3D Rubik's Cube */}
       <motion.div
-        className="absolute inset-0 z-20 flex items-center justify-center overflow-hidden"
+        className="absolute inset-0 z-20 flex items-center justify-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
