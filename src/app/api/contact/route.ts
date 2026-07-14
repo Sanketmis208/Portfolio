@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
 // In-memory rate limiting (fine for a personal portfolio)
 const rateLimitMap = new Map<string, { count: number; lastReset: number }>();
@@ -45,25 +46,30 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: Wire up Resend or EmailJS here
-    // For now, log the message and return success
-    console.log('📧 Contact form submission:', { name, email, message });
+    // Setup Nodemailer transport
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_APP_PASSWORD,
+      },
+    });
 
-    // Example Resend integration (uncomment when API key is available):
-    // const { Resend } = await import('resend');
-    // const resend = new Resend(process.env.RESEND_API_KEY);
-    // await resend.emails.send({
-    //   from: 'Portfolio <onboarding@resend.dev>',
-    //   to: 'sanketmistry.codes@gmail.com',
-    //   subject: `Portfolio Contact: ${name}`,
-    //   text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-    // });
+    const mailOptions = {
+      from: process.env.GMAIL_USER,
+      to: 'sanketmistry.codes@gmail.com',
+      subject: `New Portfolio Contact from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      replyTo: email,
+    };
 
-    return NextResponse.json({ success: true, message: 'Message received!' });
+    await transporter.sendMail(mailOptions);
+
+    return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
-    console.error('Contact form error:', error);
+    console.error('Email send error:', error);
     return NextResponse.json(
-      { error: 'Internal server error.' },
+      { error: 'Failed to send message. Please check server configuration.' },
       { status: 500 }
     );
   }

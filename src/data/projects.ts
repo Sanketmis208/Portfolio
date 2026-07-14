@@ -104,6 +104,7 @@ export const projects: Project[] = [
     slug: 'lnmiit-portal',
     title: 'LNMIIT Multi-Department Portal',
     tagline: 'Unified portal for campus departments',
+    image: '/Lnmiit_Portal.png',
     description:
       "A multi-department web portal for The LNM Institute of Information Technology, featuring a multi-subdomain architecture with per-department API scoping. Built with React frontend and Express/MySQL backend.",
     role: 'Full Stack Developer',
