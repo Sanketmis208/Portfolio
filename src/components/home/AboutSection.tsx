@@ -4,7 +4,6 @@ import Image from 'next/image';
 import MagneticButton from '@/components/shared/MagneticButton';
 import SectionReveal from '@/components/shared/SectionReveal';
 import SkillsGrid from '@/components/about/SkillsGrid';
-import Timeline from '@/components/about/Timeline';
 
 export default function AboutSection() {
   const techStack = [
@@ -98,21 +97,6 @@ export default function AboutSection() {
       </section>
 
 
-
-      {/* Experience */}
-      <section className="pt-16 pb-8 md:pt-24 md:pb-16">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <SectionReveal>
-            <h2
-              className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] mb-16"
-              style={{ fontFamily: 'var(--font-display)' }}
-            >
-              Experience
-            </h2>
-          </SectionReveal>
-          <Timeline />
-        </div>
-      </section>
     </div>
   );
 }

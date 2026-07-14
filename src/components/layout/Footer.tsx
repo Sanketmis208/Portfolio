@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const footerLinks = [
   { href: '/', label: 'Home' },
@@ -22,10 +23,14 @@ export default function Footer() {
           <div>
             <Link
               href="/"
-              className="text-2xl font-bold text-[var(--color-text-primary)]"
-              style={{ fontFamily: 'var(--font-display)' }}
+              className="relative block w-40 h-12 md:w-48 md:h-14 hover:opacity-80 transition-opacity duration-300"
             >
-              Sanket <span className="text-[var(--color-accent)]">Mistry</span>
+              <Image
+                src="/logo_transparent_v2.png"
+                alt="Sanket Mistry Logo"
+                fill
+                className="object-contain object-left scale-150 origin-left"
+              />
             </Link>
             <p className="mt-4 text-sm text-[var(--color-text-muted)] max-w-xs leading-relaxed">
               Full Stack Developer building fast, polished products.

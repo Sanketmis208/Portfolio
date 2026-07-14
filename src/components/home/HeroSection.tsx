@@ -91,25 +91,6 @@ export default function HeroSection() {
             Hi, I&apos;m <span className="text-[var(--color-text-primary)] font-medium">Sanket Mistry</span> — a Full Stack Developer &amp; Flutter Engineer building fast, scalable web and mobile applications with clean architecture and exceptional user experiences.
           </motion.p>
 
-          <motion.div
-            className="flex items-center gap-4 pt-4 pointer-events-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <a
-              href="/work"
-              className="px-7 py-3.5 bg-[var(--color-accent)] text-[var(--color-bg-primary)] rounded-full text-sm font-semibold hover:shadow-[0_0_30px_rgba(192,255,115,0.3)] transition-all duration-300"
-            >
-              View Work
-            </a>
-            <a
-              href="/contact"
-              className="px-7 py-3.5 border border-[var(--color-border)] text-[var(--color-text-primary)] rounded-full text-sm font-semibold hover:bg-[var(--color-bg-secondary)] transition-all duration-300"
-            >
-              Get in Touch
-            </a>
-          </motion.div>
         </div>
       </div>
 

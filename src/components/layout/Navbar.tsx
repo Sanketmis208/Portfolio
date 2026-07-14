@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import MagneticButton from '@/components/shared/MagneticButton';
 
@@ -41,10 +42,14 @@ export default function Navbar() {
         <nav className="max-w-[1400px] mx-auto flex items-center justify-between px-6 md:px-12 h-20">
           <Link
             href="/"
-            className="relative z-50 text-xl font-bold text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors duration-300"
-            style={{ fontFamily: 'var(--font-display)' }}
+            className="relative z-50 hover:opacity-80 transition-opacity duration-300 block w-40 h-12 md:w-48 md:h-14"
           >
-            Sanket <span className="text-[var(--color-accent)]">Mistry</span>
+            <Image
+              src="/logo_transparent_v2.png"
+              alt="Sanket Mistry Logo"
+              fill
+              className="object-contain object-left scale-150 origin-left"
+            />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
