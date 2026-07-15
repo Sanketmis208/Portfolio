@@ -10,7 +10,7 @@ export default function SkillsGrid() {
       {skillCategories.map((category, i) => (
         <SectionReveal key={category.title} delay={i * 0.1}>
           <motion.div
-            className="p-6 md:p-8 rounded-2xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:border-[var(--color-accent)]/15 transition-all duration-500 h-full"
+            className="p-6 md:p-8 rounded-2xl glass-card h-full"
             whileHover={{ y: -2 }}
             transition={{ duration: 0.3 }}
           >
@@ -27,7 +27,7 @@ export default function SkillsGrid() {
               {category.skills.map((skill) => (
                 <span
                   key={skill.name}
-                  className="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-[var(--color-accent)]/30 hover:text-[var(--color-accent)] transition-all duration-300 cursor-default"
+                  className="text-xs px-3 py-1.5 rounded-full glass-panel text-[var(--color-text-secondary)] hover:border-[var(--color-accent)]/30 hover:text-[var(--color-accent)] transition-all duration-300 cursor-default"
                 >
                   {skill.name}
                 </span>

@@ -56,7 +56,7 @@ export default function WorkSection() {
                     {project.techStack.slice(0, 5).map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] text-[var(--color-text-primary)]"
+                        className="text-xs px-3 py-1.5 rounded-full glass-panel text-[var(--color-text-primary)]"
                       >
                         {tech}
                       </span>
@@ -107,12 +107,12 @@ export default function WorkSection() {
                     </div>
                   ) : (
                     <motion.div
-                      className="relative w-full aspect-[16/10] lg:aspect-[4/3] flex flex-col rounded-2xl overflow-hidden border border-[var(--color-border)] hover:border-[var(--color-accent)]/50 bg-[var(--color-bg-primary)] shadow-2xl transition-colors duration-500"
+                      className="relative w-full aspect-[16/10] lg:aspect-[4/3] flex flex-col rounded-2xl overflow-hidden glass-card shadow-2xl"
                       whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.5, ease: 'easeOut' }}
                     >
                       {/* Window Controls */}
-                      <div className="flex items-center gap-2 px-4 py-3 border-b border-[var(--color-border)]/50 bg-[var(--color-bg-secondary)]/50 z-10">
+                      <div className="flex items-center gap-2 px-4 py-3 border-b border-[var(--color-border)]/30 bg-black/20 z-10">
                         <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]" />
                         <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
                         <div className="w-2.5 h-2.5 rounded-full bg-[#27C93F]" />

@@ -52,7 +52,7 @@ export default function ContactForm() {
   };
 
   const inputClasses =
-    'w-full bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-xl px-4 py-3 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-accent)]/50 transition-colors duration-300';
+    'w-full glass-input rounded-xl px-4 py-3 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:outline-none';
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
