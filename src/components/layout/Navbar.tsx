@@ -42,14 +42,10 @@ export default function Navbar() {
         <nav className="max-w-[1400px] mx-auto flex items-center justify-between px-6 md:px-12 h-20">
           <Link
             href="/"
-            className="relative z-50 hover:opacity-80 transition-opacity duration-300 block w-40 h-12 md:w-48 md:h-14"
+            className="relative z-50 text-2xl font-bold text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors duration-300"
+            style={{ fontFamily: 'var(--font-display)' }}
           >
-            <Image
-              src="/logo_transparent_v2.png"
-              alt="Sanket Mistry Logo"
-              fill
-              className="object-contain object-left scale-150 origin-left"
-            />
+            Sanket <span className="text-[var(--color-accent)]">Mistry</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

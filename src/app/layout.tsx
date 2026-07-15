@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 import CustomCursor from '@/components/layout/CustomCursor';
 import LenisProvider from '@/components/layout/LenisProvider';
 
@@ -56,7 +55,6 @@ export default function RootLayout({
           <CustomCursor />
           <Navbar />
           <main className="flex-1">{children}</main>
-          <Footer />
         </LenisProvider>
       </body>
     </html>
