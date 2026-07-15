@@ -24,6 +24,40 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: 'codecollab',
+    title: 'CodeCollab',
+    tagline: 'Real-time Collaboration Platform',
+    image: '/codecollab.png',
+    githubLink: 'https://github.com/Sanketmis208/CodeCollab',
+    description:
+      'Experience seamless real-time collaboration with code editing, interactive whiteboards, and video calls — all in one powerful, lightweight platform designed for developers and teams.',
+    role: 'Full Stack Developer',
+    techStack: ['React', 'WebRTC', 'Monaco Editor', 'Socket.io', 'Node.js', 'Express'],
+    resultLine: 'Code Together. Build Faster.',
+    problemStatement:
+      'Remote developer teams often struggle with disjointed tools for coding, diagramming, and communication, leading to friction in pair programming and architecture discussions.',
+    approach:
+      'I built a unified platform integrating a Monaco-based smart code editor with real-time syntax highlighting, an interactive whiteboard with intelligent stroke recognition, and crystal-clear WebRTC video calls.',
+    solution:
+      'CodeCollab optimizes performance with instant updates and minimal latency, allowing developers to seamlessly sketch ideas on a whiteboard while writing code and communicating over video, all in the same browser window.',
+    backendCapabilities: [
+      'WebRTC signaling server for P2P video calls',
+      'Socket.io rooms for real-time collaboration',
+      'State synchronization for Monaco editor',
+      'Scalable Node.js/Express architecture',
+    ],
+    frontendCapabilities: [
+      'Monaco-based editor with multi-language support',
+      'Interactive whiteboard with eraser tools',
+      'WebRTC video streams with participant management',
+      'Optimized instant updates with minimal latency',
+    ],
+    hasBeforeAfter: false,
+    year: '2026',
+    color: '#8A2BE2',
+    category: 'Web Development',
+  },
+  {
     slug: 'florinaa',
     title: 'Florinaa',
     tagline: 'Luxury textile & blanket export platform',
@@ -105,6 +139,7 @@ export const projects: Project[] = [
     title: 'LNMIIT Multi-Department Portal',
     tagline: 'Unified portal for campus departments',
     image: '/Lnmiit_Portal.png',
+    githubLink: 'https://github.com/Sanketmis208/btp_lnmiit_portal',
     description:
       "A multi-department web portal for The LNM Institute of Information Technology, featuring a multi-subdomain architecture with per-department API scoping. Built with React frontend and Express/MySQL backend.",
     role: 'Full Stack Developer',

@@ -107,7 +107,7 @@ export default function WorkSection() {
                     </div>
                   ) : (
                     <motion.div
-                      className="relative w-full aspect-[16/10] lg:aspect-[4/3] flex flex-col rounded-2xl overflow-hidden glass-card shadow-2xl"
+                      className="relative w-full aspect-video flex flex-col rounded-2xl overflow-hidden glass-card shadow-2xl"
                       whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.5, ease: 'easeOut' }}
                     >

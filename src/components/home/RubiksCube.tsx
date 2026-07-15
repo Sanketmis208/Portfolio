@@ -105,12 +105,12 @@ const Cube = React.memo(function Cube({ position, cubeState, isHovered, isAdjace
     // Smooth ease in-out
     const rotEase = rotProgress < 0.5 ? 4 * rotProgress * rotProgress * rotProgress : 1 - Math.pow(-2 * rotProgress + 2, 3) / 2;
 
-    const globalRotY = rotEase * Math.PI * 2 * 4; // 4 full 360 rotations
-    const globalRotX = rotEase * Math.PI * 2; // 1 full tumble
+    const globalRotY = rotEase * Math.PI * 2 * 1.5; // 1.5 full 360 rotations
+    const globalRotX = rotEase * Math.PI; // Half a tumble
 
     let layerRotY = 0;
-    if (cubeState.currentPos.y > 0.1) layerRotY = rotEase * Math.PI * 2;
-    if (cubeState.currentPos.y < -0.1) layerRotY = -rotEase * Math.PI * 2;
+    if (cubeState.currentPos.y > 0.1) layerRotY = rotEase * Math.PI;
+    if (cubeState.currentPos.y < -0.1) layerRotY = -rotEase * Math.PI;
 
     const scrollQuat = new THREE.Quaternion();
     const qGlobalY = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), globalRotY);
