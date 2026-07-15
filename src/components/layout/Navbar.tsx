@@ -64,7 +64,7 @@ export default function Navbar() {
               </Link>
             ))}
             <MagneticButton variant="outline" size="sm" href="/resume.pdf">
-              Download CV
+              Download Resume
             </MagneticButton>
           </div>
 
@@ -128,7 +128,7 @@ export default function Navbar() {
                 transition={{ delay: 0.35, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               >
                 <MagneticButton variant="primary" size="md" href="/resume.pdf">
-                  Download CV
+                  Download Resume
                 </MagneticButton>
               </motion.div>
             </nav>

@@ -19,8 +19,8 @@ export default function Footer() {
     <footer className="relative border-t border-[var(--color-border)]">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--color-accent)]/20 to-transparent" />
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
-          <div>
+        <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-8">
+          <div className="md:max-w-sm">
             <Link
               href="/"
               className="relative block w-40 h-12 md:w-48 md:h-14 hover:opacity-80 transition-opacity duration-300"
@@ -32,26 +32,9 @@ export default function Footer() {
                 className="object-contain object-left scale-150 origin-left"
               />
             </Link>
-            <p className="mt-4 text-sm text-[var(--color-text-muted)] max-w-xs leading-relaxed">
+            <p className="mt-4 text-sm text-[var(--color-text-muted)] leading-relaxed">
               Full Stack Developer building fast, polished products.
             </p>
-          </div>
-          <div>
-            <h4 className="text-xs uppercase tracking-widest text-[var(--color-text-muted)] mb-4">
-              Navigation
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-300"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
           <div>
             <h4 className="text-xs uppercase tracking-widest text-[var(--color-text-muted)] mb-4">
