@@ -200,6 +200,6 @@ export const projects: Project[] = [
     color: '#27C93F',
     category: 'MOBILE DEVELOPMENT',
     githubLink: 'https://github.com/Sanketmis208/DhatuScan_App',
-    mobileImages: ['/Dhatuscan/1.png', '/Dhatuscan/2.png', '/Dhatuscan/3.png'],
+    mobileImages: ['/DhatuScan/1.png', '/DhatuScan/2.png', '/DhatuScan/3.png'],
   },
 ];
