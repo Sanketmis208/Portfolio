@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import CustomCursor from '@/components/layout/CustomCursor';
 import LenisProvider from '@/components/layout/LenisProvider';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -64,6 +65,9 @@ export default function RootLayout({
           <Navbar />
           <main className="flex-1 relative z-0">{children}</main>
         </LenisProvider>
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
       </body>
     </html>
   );
