@@ -57,6 +57,8 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Dart' },
       { name: 'Riverpod' },
       { name: 'go_router' },
+      { name: 'Drift' },
+      { name: 'Sembast' },
       { name: 'iOS / Android Deployment' },
       { name: 'Clean Architecture' },
     ],
