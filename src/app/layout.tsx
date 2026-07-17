@@ -12,6 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://sanketmistry.space'),
   title: {
     default: 'Sanket Mistry — Full Stack Developer & Flutter Engineer',
     template: '%s | Sanket Mistry',
